@@ -34,7 +34,7 @@ namespace Classes
             }
         }
 
-        public Room? GetRoomById(int id)
+        public Room GetRoomById(int id)
         {
             var room = Rooms.FirstOrDefault(x => x.Id == id);
             if (room != null)
