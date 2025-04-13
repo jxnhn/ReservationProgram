@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<IsPackable>false</IsPackable>
+		<IsTestProject>true</IsTestProject>
+	
+		<SpecFlow_EnableDefaultCompileItems>false</SpecFlow_EnableDefaultCompileItems>
+	</PropertyGroup>
+
+	<ItemGroup>
+	
+		<PackageReference Include="SpecFlow" Version="3.9.74" />
+		<PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.74" />
+		<PackageReference Include="SpecFlow.xUnit" Version="3.9.74" />
+
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+		<PackageReference Include="xunit" Version="2.5.3" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
+		<PackageReference Include="coverlet.collector" Version="6.0.0" />
+		<PackageReference Include="coverlet.msbuild" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Referências de projeto -->
+		<ProjectReference Include="..\Classes\Classes.csproj" />
+	
+		<ProjectReference Include="..\UnitTests\UnitTests.csproj" /> 
+	</ItemGroup>
+
+	<!-- Configuração importante para o SpecFlow -->
+	<ItemGroup>
+		<SpecFlowFeatureFiles Update="Features\*.feature" />
+		<SpecFlowFeatureFiles Update="Features\*.feature.cs" Generator="SpecFlowSingleFileGenerator" />
+	</ItemGroup>
+
+</Project>

@@ -3,12 +3,12 @@ using Classes;
 
 namespace UnitTests
 {
-    public class ReservationTests : IClassFixture<RoomFixture>
+    public class UnitTests : IClassFixture<RoomFixture>
     {
 
         private readonly RoomFixture _roomFixture;
 
-        public ReservationTests(RoomFixture roomFixture) {
+        public UnitTests(RoomFixture roomFixture) {
             _roomFixture = roomFixture; 
         }
 
