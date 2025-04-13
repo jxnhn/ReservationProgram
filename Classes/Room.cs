@@ -7,8 +7,6 @@
 
         public bool IsReserved { get; set; }
 
-
-        //adicionar os valores de initial e final time no construtor, convertendo uma string pra date time se possivel
         public Room(int id, int maxCapacity)
         {
 
